@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List App</title>
+
+    <!-- incloud style sheet -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- incloud icons source -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <div class="todo-contenar">
+        <h1>todo list</h1>
+        <!-- inpur box -->
+        <div class="inpur-box">
+            <input placeholder="add your task" type="text">
+            <button onclick="addTask()" class="add-task-btn">
+                <i class='bx bx-message-square-add'></i>
+            </button>
+        </div>
+
+        <!-- filter task -->
+        <ul class="filter-task">
+            <li id="all">all</li>
+            <li id="panding">panding</li>
+            <li id="completed">completed</li>
+        </ul>
+
+        <!-- show task -->
+        <ul class="show-task">
+            <!-- <li>
+                <div class="task-name">
+                    <input id="task-check-box" type="checkbox">
+                    <label for="task-check-box">rafsan</label>
+                </div>
+                <div class="menu-task">
+                    <i class='bx bx-dots-horizontal-rounded' ></i>
+                    <div class="sub-menu">
+                        <button>edit</button>
+                        <button>delet</button>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+
+    </div>
+
+    <!-- incloud js file -->
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* incloud font style */
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Rethink Sans', sans-serif;
+}
+
+body
+{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.todo-contenar
+{
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.205);
+    min-height: 450px;
+}
+
+.todo-contenar h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    line-height: 50px;
+    color: brown;
+    cursor: default;
+}
+
+.todo-contenar .inpur-box
+{
+    height: 45px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.todo-contenar .inpur-box input{
+    width: 90%;
+    height: 100%;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.342);
+    padding: 0px 20px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.todo-contenar .inpur-box button
+{
+    position: absolute;
+    right: 18px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50% 50% 50% 0px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    background-color: blueviolet;
+    display: grid;
+    place-items: center;
+}
+
+.todo-contenar .filter-task 
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    line-height: 40px;
+}
+
+.todo-contenar .filter-task li
+{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    padding: 0px 1rem;
+    cursor: pointer;
+    font-weight: bolder;
+    user-select: none;
+}
+
+.todo-contenar .show-task
+{
+    width: 100%;
+}
+
+.todo-contenar .show-task li
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-bottom: .5rem;
+    padding: 0px 1rem;
+    user-select: none;
+}
+
+.todo-contenar .show-task li .task-name input
+{
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.todo-contenar .show-task li .task-name label
+{
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+.todo-contenar .show-task li .task-name label.checked
+{
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.todo-contenar .show-task li .menu-task 
+{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(211, 214, 223);
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border-radius: 10px 10px 10px 0px;
+    position: relative;
+}
+
+.todo-contenar .show-task li .menu-task.show
+{
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+.todo-contenar .show-task li .menu-task .sub-menu
+{
+    width: 100px;
+    position: absolute;
+    top: 33px;
+    right: 0px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(211, 214, 223);
+    transform: scaley(0);
+    transition: all .5s;
+    transform-origin: top;
+    z-index: 9;
+    border-radius: 10px 0px 10px 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.13);
+}
+
+.todo-contenar .show-task li .menu-task.show .sub-menu
+{
+    transform: scaley(1);
+}
+
+.todo-contenar .show-task li .menu-task .sub-menu button
+{
+    width: 100%;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: capitalize;
+    border-radius: 10px;
+    opacity: .6;
+}
+
+.todo-contenar .show-task li .menu-task.show .sub-menu button:hover
+{
+    opacity: 1;
+}
